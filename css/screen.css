@@ -67,7 +67,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, ../_sass/screen.scss */
-.home-hero {
-  background-color: yellow;
+/* line 61, ../../../../.rvm/gems/ruby-head@jekyll/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../.rvm/gems/ruby-head@jekyll/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 5, ../_sass/modules/_typography.scss */
+body {
+  font-family: 'Helvetica', Ariel, sans;
+}
+
+/* line 10, ../_sass/screen.scss */
+.hero {
+  background-color: lightblue;
 }
