@@ -16,38 +16,19 @@
     </head>
     <body>
         
-        <header>
-          <span>header navigation goes here, meow</span>
+        <div class="home hero">
+          <img class="logo" src="{{ site.baseurl }}/images/Orange-Logo.png" alt="Tim Proffitt">
+        </div>
+
+        <header class="home">
+          <nav>
+            <ul>
+              <li><a href="">ABOUT</a></li>
+              <li><a href="">BLOG</a></li>
+              <li><a href="http://www.google.com">RESUME</a></li>
+            </ul>
+          </nav>
         </header>
-
-        <div class="hero home-hero">
-          <h1>Hero goes here, meow</h1>
-        </div>
-        
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
 
     </body>
 </html>

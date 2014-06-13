@@ -75,7 +75,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 64, ../../../../.rvm/gems/ruby-head@jekyll/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 16px;
-  line-height: 1.5em;
+  line-height: 1.75em;
 }
 
 /* line 5, ../_sass/modules/_typography.scss */
@@ -83,7 +83,22 @@ body {
   font-family: 'Helvetica', Ariel, sans;
 }
 
-/* line 10, ../_sass/screen.scss */
-.hero {
-  background-color: lightblue;
+/* line 17, ../_sass/screen.scss */
+.hero.home {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+/* line 21, ../_sass/screen.scss */
+.hero.home .logo {
+  height: 240px;
+}
+
+/* line 31, ../_sass/screen.scss */
+header > nav a, header > nav a:visited {
+  color: #3b6e85;
+  text-decoration: none;
+}
+/* line 36, ../_sass/screen.scss */
+header > nav a:hover {
+  color: #1c343e;
 }

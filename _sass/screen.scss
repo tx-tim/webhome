@@ -7,6 +7,33 @@
 
 @import "./modules/typography";
 
+
+$base-orange: #d86b49;
+$base-blue: #3b6e85;
+$dark-text: #1a1a1f;
+$gray1: #efdfee;
 .hero{
-    background-color: lightblue;
+    //background-color: lightblue;
+    &.home{
+        padding-bottom: 2em;
+        padding-top: 2em;
+
+        .logo{
+            height: 240px;
+        }
+    }
+}
+
+
+header > nav{
+    //@include adjust-font-size-to(20px);
+
+    a, a:visited{
+        color: $base-blue;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: darken($base-blue, 20%);
+    }
 }
