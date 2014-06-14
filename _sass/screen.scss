@@ -12,6 +12,18 @@ $base-orange: #d86b49;
 $base-blue: #3b6e85;
 $dark-text: #1a1a1f;
 $gray1: #efdfee;
+
+
+/* utility classes */
+/* =============== */
+
+.text-dashed{
+    border-bottom: 1px dashed $dark-text;
+}
+
+/* modules */
+/* =============== */
+
 .hero{
     //background-color: lightblue;
     &.home{
@@ -20,6 +32,10 @@ $gray1: #efdfee;
 
         .logo{
             height: 240px;
+        }
+
+        .sections{
+            @include horizontal-list;
         }
     }
 }
