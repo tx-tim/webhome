@@ -13,3 +13,22 @@
     width: 970px;
 
 }
+
+@include mq(small){
+    .page{
+        width: 100%;
+    }
+}
+
+@include mq(med){
+    .page{
+        width: 100%;
+    }
+}
+
+@include mq(large){
+    .page{
+        width: 970px;
+    }
+}
+

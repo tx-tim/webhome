@@ -2597,14 +2597,16 @@ body {
   content: "\f1e2";
 }
 
+/* media queries */
+/* =============== */
 /* utility classes */
 /* =============== */
-/* line 4, ../../_sass/modules/_utility.scss */
+/* line 27, ../../_sass/modules/_utility.scss */
 .text-dashed {
   border-bottom: 1px dashed #1a1a1f;
 }
 
-/* line 8, ../../_sass/modules/_utility.scss */
+/* line 31, ../../_sass/modules/_utility.scss */
 .list-h {
   margin: 0;
   padding: 0;
@@ -3008,6 +3010,24 @@ body {
   width: 970px;
 }
 
+@media only screen and (max-width: 767px) {
+  /* line 18, ../../_sass/modules/_grid.scss */
+  .page {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 24, ../../_sass/modules/_grid.scss */
+  .page {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  /* line 30, ../../_sass/modules/_grid.scss */
+  .page {
+    width: 970px;
+  }
+}
 /* hero */
 /* =============== */
 /* line 6, ../../_sass/modules/_hero.scss */
@@ -3042,38 +3062,51 @@ header {
 }
 /* line 3, ../../_sass/modules/_header.scss */
 header nav {
-  font-size: 0.875em;
-  line-height: 1.71429em;
   display: inline-block;
   width: 49%;
 }
-/* line 8, ../../_sass/modules/_header.scss */
+/* line 7, ../../_sass/modules/_header.scss */
 header nav ul > li {
   padding: 0 0.5em;
 }
-/* line 12, ../../_sass/modules/_header.scss */
+/* line 11, ../../_sass/modules/_header.scss */
 header nav a, header nav a:visited {
   color: #3b6e85;
   text-decoration: none;
 }
-/* line 17, ../../_sass/modules/_header.scss */
+/* line 16, ../../_sass/modules/_header.scss */
 header nav a:hover {
   color: #1c343e;
 }
-/* line 21, ../../_sass/modules/_header.scss */
+/* line 20, ../../_sass/modules/_header.scss */
 header nav.site-nav {
   text-align: left;
 }
-/* line 25, ../../_sass/modules/_header.scss */
+/* line 24, ../../_sass/modules/_header.scss */
 header nav.connect ul {
   text-align: right;
   font-size: 1.5em;
 }
-/* line 29, ../../_sass/modules/_header.scss */
+/* line 28, ../../_sass/modules/_header.scss */
 header nav.connect ul > li {
   padding: 0 0.125em;
 }
-/* line 33, ../../_sass/modules/_header.scss */
+/* line 32, ../../_sass/modules/_header.scss */
 header nav.connect ul .connect-ovr {
   font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 41, ../../_sass/modules/_header.scss */
+  header nav {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+  }
+}
+@media only screen and (min-width: 769px) {
+  /* line 50, ../../_sass/modules/_header.scss */
+  header nav {
+    font-size: 0.875em;
+    line-height: 1.71429em;
+  }
 }

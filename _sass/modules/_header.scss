@@ -1,7 +1,6 @@
 header{
     padding-top: $base-vertical-padding;
     nav{
-        @include adjust-font-size-to(14px);
         @include unit;
         @include col-one-half;
 
@@ -33,6 +32,23 @@ header{
             .connect-ovr{
                 font-size: 14px;
             }
+        }
+    }
+}
+
+@include mq(small){
+    header{
+        nav{
+            @include adjust-font-size-to(18px);
+        }
+    }
+}
+
+
+@include mq(large){
+    header{
+        nav{
+            @include adjust-font-size-to(14px);
         }
     }
 }
