@@ -1,7 +1,6 @@
-$base-font-size: 16px;
-$base-line-height: 28px;
 @include establish-baseline;
+@import url(http://fonts.googleapis.com/css?family=Lustria);
 
 body{
-    font-family: 'Helvetica', Ariel, sans;
+    font-family: 'Lustria', Ariel, sans;
 }

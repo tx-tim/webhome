@@ -1,0 +1,15 @@
+/* grid */
+/* =============== */
+@mixin unit{
+    display: inline-block;
+}
+
+@mixin col-one-half{
+    width: 49%;
+}
+
+.page{
+    margin: auto;
+    width: 970px;
+
+}

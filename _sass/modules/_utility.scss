@@ -1,0 +1,11 @@
+/* utility classes */
+/* =============== */
+
+.text-dashed{
+    border-bottom: 1px dashed $dark-text;
+}
+
+.list-h{
+    @include inline-block-list;
+}
+

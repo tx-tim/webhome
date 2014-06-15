@@ -1,0 +1,29 @@
+/* hero */
+/* =============== */
+
+.hero{
+    //background-color: lightblue;
+    &.home{
+        padding-bottom: 2em;
+        padding-top: 2em;
+        text-align: center;
+
+        .logo{
+            height: 240px;
+        }
+
+        .list-h{
+            @include adjust-font-size-to(28px);
+            color: darken($base-blue, 20%);
+            padding-top: $base-vertical-padding;
+
+            > li{
+                padding-right: $base-horiz-padding * 2;
+
+                  &:last-child{
+                    padding-right: 0;
+                  }  
+            }
+        }
+    }
+}

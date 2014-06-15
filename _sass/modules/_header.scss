@@ -1,0 +1,38 @@
+header{
+    padding-top: $base-vertical-padding;
+    nav{
+        @include adjust-font-size-to(14px);
+        @include unit;
+        @include col-one-half;
+
+        ul > li{
+            padding: 0 $base-horiz-padding*2;
+        }
+
+        a, a:visited{
+            color: $base-blue;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: darken($base-blue, 20%);
+        }
+
+        &.site-nav{
+            text-align: left;
+        }
+
+        &.connect ul{
+            text-align: right;
+            font-size: 1.5em;
+
+            >li{
+                padding: 0 $base-horiz-padding/2;
+            }
+
+            .connect-ovr{
+                font-size: 14px;
+            }
+        }
+    }
+}
