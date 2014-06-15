@@ -14,7 +14,7 @@
 
         .list-h{
             @include adjust-font-size-to(28px);
-            color: darken($base-blue, 20%);
+            color: darken($base-blue, 10%);
             padding-top: $base-vertical-padding;
 
             > li{
