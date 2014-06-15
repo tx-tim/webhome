@@ -1,0 +1,21 @@
+---
+layout: post
+category: case-study
+---
+
+ADT was my first on-site consulting gig with Improving Enterprises, and at the time, the most 
+
+the newness of it all
+
+New job: I had come to Improving less than a month earlier
+
+New javascript framework: Knockout.js
+I'd been using Backbone as my MV* of choice for about a year.  After an initial distaste with Knockout's declarative data binding, I came to appreciate the simplicity of the ko.observable.
+
+New scripting language: CoffeeScript - I hadn't even heard of it, and quite frankly, I still get confused by which arrow, fat or thin, will preserve a function's context.  (Rule of thumb for the interested:  if callback and @, use arrow the fat)  link to http://michaeljosephkramer.com/2013/03/12/the-simplified-fat-arrow-guide-for-coffeescript/
+I really like the conciseness of Coffee code but I haven't used it since.  I hear it's a feature of ECMA6 so I'm sure Mr. Fat Arrow and I will meet again.
+
+Compass - while I had tinkered around with SASS a little, I had been hesitant to venture out into using Compass; I wanted to understand the core principles of SASS before moving on to a framework.  I quickly came to appreciate the comprehensiveness that the Compass toolset has to offer and I now hesitate to develop without it.
+
+My favorite part of the project was the team.  It was at ADT that I saw realized what all the hype around agile development methods was all about.
+I saw how efficient a development team could be when applying agile principles to the scrum methodology.
