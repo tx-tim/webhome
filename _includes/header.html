@@ -1,9 +1,14 @@
   <header class="home" role="banner">
     <nav class="site-nav">
       <ul class="list-h">
-        <li><a href="case-studies.html">WORK</a></li>
+        {% for p in site.pages %}
+          {% if p.title == "Case Studies" %}
+          <li><a href="{{p.url}}">{{p.title}}</a></li>
+          {% endif %}
+        {% endfor %}
+
         <!-- <li><a href="">BLOG</a></li> -->
-        <li ><a target="_" href="/assets/images/Tim_Proffitt_CV.pdf">RESUME</a></li>
+        <li ><a target="_" href="/assets/images/Tim_Proffitt_CV.pdf">Resume</a></li>
       </ul>
     </nav>
     
@@ -25,3 +30,5 @@
       </ul>
     </nav>
   </header>
+
+

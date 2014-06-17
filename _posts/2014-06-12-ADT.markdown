@@ -1,0 +1,27 @@
+---
+layout: post
+category: case-study
+title: Welcome to New
+---
+
+Project Url:  [MyADT](http://www.myadt.com "My ADT")  
+A self service alarm and billing portal for customers of ADT Home Security services built with Java and Knockout.js.
+
+Everything about this period of time in my life was new.
+
+**New job**
+I had left my position at Schneider Electric less than a month earlier to join  Improving Enterprises as a Senior Ux Consultant.
+
+**New family**  
+My first child was born shortly after joining Improving.
+
+ADT was my first on-site gig as a consultant, and just like the rest of my life, everything there was new too.
+
+**New javascript framework: Knockout.js**  
+I'd been using Backbone as my MV* of choice for about a year.  After an initial distaste with Knockout's declarative data binding, I came to appreciate the simplicity of the ko.observable.
+
+**New scripting language: CoffeeScript**  
+I hadn't even heard of it at the time, and had a hard time keeping straight which arrow, fat or thin, I should be using (Handy mnemonic: If you need this to be that, you should use an fat).  I really like the conciseness of Coffee code but I haven't used it since though I hear it's a feature of ECMA6 so I'm sure Mr. Fat Arrow and I will meet again.
+
+**Compass**  
+While I had been tinkering around with SASS, incorporating it in projects where possible, I had been hesitant to venture out into using Compass; I wanted to understand the core principles of SASS before moving on to a framework.  I quickly came to appreciate the comprehensiveness that the Compass toolset has to offer and I now hesitate to develop without it.

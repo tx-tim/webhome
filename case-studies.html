@@ -1,17 +1,33 @@
 ---
 layout: home
-title: Case Studies
+title: Projects
 ---
 
     
   <div class="home hero">
-    <img class="logo" src="/assets/images/Orange-Logo.png" alt="Tim Proffitt">
-    Case studies here
+    <a href="/"><img class="logo" src="/assets/images/Orange-Logo.png" alt="Tim Proffitt"></a>
   </div>
 
   <ul class="posts">
-    <h2>Case Studies</h2>
+    <h2>Projects</h2>
     {% for post in site.categories.case-study %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li> -->
+
+        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+        <br>
+        {% if post.category == 'case-study' %}
+        <li><a href="{{ post.url }}">Read more...</a></li>
+        {% endif %}
+        <br>
     {% endfor %}
+
+    {% for post in site.categories.project %}
+        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+        <br>
+        {% if post.category == 'case-study' %}
+        <li><a href="{{ post.url }}">Read more...</a></li>
+        {% endif %}
+        <br>
+    {% endfor %}
+
   </ul>
