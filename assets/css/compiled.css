@@ -3324,7 +3324,7 @@ strong {
 
 @media only screen and (max-width: 767px) {
   /* line 45, ../../_sass/modules/_grid.scss */
-  .page {
+  .container {
     width: 100%;
   }
 
@@ -3336,7 +3336,7 @@ strong {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* line 57, ../../_sass/modules/_grid.scss */
-  .page {
+  .container {
     width: 100%;
   }
 
@@ -3348,7 +3348,7 @@ strong {
 }
 @media only screen and (min-width: 769px) {
   /* line 69, ../../_sass/modules/_grid.scss */
-  .page {
+  .container {
     width: 970px;
   }
 

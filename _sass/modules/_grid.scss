@@ -42,7 +42,7 @@ $effective-width-lg: 970px;
 
 
 @include mq(small){
-    .page{
+    .container{
         width: $effective-width-sm;
     }
     .row{
@@ -54,7 +54,7 @@ $effective-width-lg: 970px;
 }
 
 @include mq(med){
-    .page{
+    .container{
         width: $effective-width-md;
     }
     .row{
@@ -66,7 +66,7 @@ $effective-width-lg: 970px;
 }
 
 @include mq(large){
-    .page{
+    .container{
         width: $effective-width-lg;
     }
     .row{
