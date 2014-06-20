@@ -1,6 +1,29 @@
-@include establish-baseline;
+@include establish-baseline($base-font-size);
 @import url(http://fonts.googleapis.com/css?family=Lustria);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
 
 body{
-    font-family: 'Lustria', Ariel, sans;
+    //font-family: 'Lustria', Ariel, sans;
+    font-family: 'Raleway', Helvetica, Ariel, sans;
+}
+
+h1{
+    @include adjust-font-size-to($h1);
+}
+
+h2{
+     @include adjust-font-size-to($h2);
+}
+
+h3{
+     @include adjust-font-size-to($h3);
+}
+
+h4{
+    font-weight: bold;
+}
+
+strong{
+    font-weight: bold;
 }

@@ -14,22 +14,12 @@
 
     </head>
     <body>
-      <div class="page">
+      <div class="container">
         {% include header.html %}
-        <h1>Case Study:  {{ page.title }}</h1>
-        {{ content }}
+        <div class="post">
+            <h1>Case Study:  {{ page.title }}</h1>
+            {{ content }}
+        </div>
       </div>
     </body>
 </html>
-<!-- 
-
-<div class="hero">
-  <h1>Case Study:  {{ page.title }}</h1>
-</div>
-
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-{{ content }}
-</div> -->

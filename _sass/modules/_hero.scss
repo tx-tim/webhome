@@ -13,7 +13,7 @@
         }
 
         .list-h{
-            @include adjust-font-size-to(28px);
+            @include adjust-font-size-to($h2);
             color: darken($base-blue, 10%);
             padding-top: $base-vertical-padding;
 

@@ -3,6 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(http://fonts.googleapis.com/css?family=Lustria);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 /* line 17, ../../../../../.rvm/gems/ruby-head@jekyll/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -269,18 +270,46 @@ a:visited {
 
 /* line 61, ../../../../../.rvm/gems/ruby-head@jekyll/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
-  font-size: 100%;
+  font-size: 137.5%;
 }
 
 /* line 64, ../../../../../.rvm/gems/ruby-head@jekyll/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.5em;
 }
 
-/* line 4, ../../_sass/modules/_typography.scss */
+/* line 6, ../../_sass/modules/_typography.scss */
 body {
-  font-family: 'Lustria', Ariel, sans;
+  font-family: 'Raleway', Helvetica, Ariel, sans;
+}
+
+/* line 11, ../../_sass/modules/_typography.scss */
+h1 {
+  font-size: 2.44136em;
+  line-height: 1.22882em;
+}
+
+/* line 15, ../../_sass/modules/_typography.scss */
+h2 {
+  font-size: 1.95273em;
+  line-height: 1.53631em;
+}
+
+/* line 19, ../../_sass/modules/_typography.scss */
+h3 {
+  font-size: 1.5625em;
+  line-height: 1.92em;
+}
+
+/* line 23, ../../_sass/modules/_typography.scss */
+h4 {
+  font-weight: bold;
+}
+
+/* line 27, ../../_sass/modules/_typography.scss */
+strong {
+  font-weight: bold;
 }
 
 /*!
@@ -2798,12 +2827,12 @@ body {
 /* =============== */
 /* utility classes */
 /* =============== */
-/* line 27, ../../_sass/modules/_utility.scss */
+/* line 52, ../../_sass/modules/_utility.scss */
 .text-dashed {
   border-bottom: 1px dashed #1a1a1f;
 }
 
-/* line 31, ../../_sass/modules/_utility.scss */
+/* line 56, ../../_sass/modules/_utility.scss */
 .list-h {
   margin: 0;
   padding: 0;
@@ -2823,6 +2852,16 @@ body {
   zoom: 1;
   *display: inline;
   white-space: nowrap;
+}
+
+/* line 60, ../../_sass/modules/_utility.scss */
+.mb-half {
+  margin-bottom: 0.75em;
+}
+
+/* line 64, ../../_sass/modules/_utility.scss */
+.mb-1 {
+  margin-bottom: 1.5em;
 }
 
 /* line 1, ../../_sass/modules/_syntax.scss */
@@ -3201,27 +3240,121 @@ body {
 /* Literal.Number.Integer.Long */
 /* grid */
 /* =============== */
-/* line 11, ../../_sass/modules/_grid.scss */
-.page {
+/* containers */
+/* =============== */
+/* line 21, ../../_sass/modules/_grid.scss */
+.container {
   margin: auto;
   width: 970px;
 }
 
+/* line 26, ../../_sass/modules/_grid.scss */
+.row {
+  width: 100%;
+}
+/* line 29, ../../_sass/modules/_grid.scss */
+.row .unit {
+  margin: auto;
+  width: 970px;
+}
+
+/* rows and groups */
+/* =============== */
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-0 {
+  background-color: #d97252;
+  color: #fff;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-1 {
+  background-color: #efefef;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-2 {
+  background-color: #89a8b5;
+  color: #fff;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-3 {
+  background-color: #e7edf0;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-4 {
+  background-color: #687be9;
+  color: #fff;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-5 {
+  background-color: #d97252;
+  color: #fff;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-6 {
+  background-color: #efefef;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-7 {
+  background-color: #89a8b5;
+  color: #fff;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-8 {
+  background-color: #e7edf0;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-9 {
+  background-color: #687be9;
+  color: #fff;
+}
+
+/* line 37, ../../_sass/modules/_grid.scss */
+.color-stripe-10 {
+  background-color: #d97252;
+  color: #fff;
+}
+
 @media only screen and (max-width: 767px) {
-  /* line 18, ../../_sass/modules/_grid.scss */
+  /* line 45, ../../_sass/modules/_grid.scss */
   .page {
+    width: 100%;
+  }
+
+  /* line 49, ../../_sass/modules/_grid.scss */
+  .row .unit {
+    margin: auto;
     width: 100%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* line 24, ../../_sass/modules/_grid.scss */
+  /* line 57, ../../_sass/modules/_grid.scss */
   .page {
+    width: 100%;
+  }
+
+  /* line 61, ../../_sass/modules/_grid.scss */
+  .row .unit {
+    margin: auto;
     width: 100%;
   }
 }
 @media only screen and (min-width: 769px) {
-  /* line 30, ../../_sass/modules/_grid.scss */
+  /* line 69, ../../_sass/modules/_grid.scss */
   .page {
+    width: 970px;
+  }
+
+  /* line 73, ../../_sass/modules/_grid.scss */
+  .row .unit {
+    margin: auto;
     width: 970px;
   }
 }
@@ -3239,8 +3372,8 @@ body {
 }
 /* line 15, ../../_sass/modules/_hero.scss */
 .hero.home .list-h {
-  font-size: 1.75em;
-  line-height: 1.71429em;
+  font-size: 1.95273em;
+  line-height: 1.53631em;
   color: #2b5162;
   padding-top: 0.5em;
 }
@@ -3279,31 +3412,68 @@ header nav a:hover {
 header nav.site-nav {
   text-align: left;
 }
-/* line 24, ../../_sass/modules/_header.scss */
+/* line 23, ../../_sass/modules/_header.scss */
+header nav.site-nav li:first-child {
+  padding-left: 0;
+}
+/* line 28, ../../_sass/modules/_header.scss */
 header nav.connect ul {
   text-align: right;
   font-size: 1.5em;
 }
-/* line 28, ../../_sass/modules/_header.scss */
+/* line 32, ../../_sass/modules/_header.scss */
 header nav.connect ul > li {
   padding: 0 0.125em;
 }
-/* line 32, ../../_sass/modules/_header.scss */
+/* line 34, ../../_sass/modules/_header.scss */
+header nav.connect ul > li:last-child {
+  padding-right: 0;
+}
+/* line 39, ../../_sass/modules/_header.scss */
 header nav.connect ul .connect-ovr {
   font-size: 14px;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 41, ../../_sass/modules/_header.scss */
+  /* line 48, ../../_sass/modules/_header.scss */
   header nav {
-    font-size: 1.125em;
-    line-height: 1.33333em;
+    font-size: 0.81818em;
+    line-height: 1.83333em;
   }
 }
 @media only screen and (min-width: 769px) {
-  /* line 50, ../../_sass/modules/_header.scss */
+  /* line 57, ../../_sass/modules/_header.scss */
   header nav {
-    font-size: 0.875em;
-    line-height: 1.71429em;
+    font-size: 0.81818em;
+    line-height: 1.83333em;
   }
+}
+/* line 2, ../../_sass/modules/_posts.scss */
+.posts a, .post a, .posts a:visited, .post a:visited {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+/* line 10, ../../_sass/modules/_posts.scss */
+.posts a:hover, .post a:hover {
+  background-color: #e59e88;
+  transition: background-color 0.3s;
+}
+
+/* line 18, ../../_sass/modules/_posts.scss */
+.posts .row {
+  margin-top: 0em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  margin-bottom: 0em;
+}
+
+/* line 25, ../../_sass/modules/_posts.scss */
+.post h1 {
+  margin-top: 0em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  margin-bottom: 0em;
 }

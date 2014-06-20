@@ -8,27 +8,72 @@
     width: 49%;
 }
 
-.page{
-    margin: auto;
-    width: 970px;
-
+@mixin container{
+    width: 100%;
 }
+
+$effective-width: 970px;
+$effective-width-sm: 100%;
+$effective-width-md: 100%;
+$effective-width-lg: 970px;
+/* containers */
+/* =============== */
+.container{
+    margin: auto;
+    width: $effective-width;
+}
+
+.row{
+    width: 100%;
+
+    .unit{
+        margin: auto;
+        width: $effective-width;
+    }
+}
+/* rows and groups */
+/* =============== */
+@for $i from 0 through 10{
+  .color-stripe-#{$i}{
+    @include color-switch($i);
+  }
+}
+
+
 
 @include mq(small){
     .page{
-        width: 100%;
+        width: $effective-width-sm;
+    }
+    .row{
+        .unit{
+            margin: auto;
+            width: $effective-width-sm;
+        }
     }
 }
 
 @include mq(med){
     .page{
-        width: 100%;
+        width: $effective-width-md;
+    }
+    .row{
+        .unit{
+            margin: auto;
+            width: $effective-width-md;
+        }
     }
 }
 
 @include mq(large){
     .page{
-        width: 970px;
+        width: $effective-width-lg;
+    }
+    .row{
+        .unit{
+            margin: auto;
+            width: $effective-width-lg;
+        }
     }
 }
 

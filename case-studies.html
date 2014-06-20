@@ -1,33 +1,41 @@
 ---
-layout: home
+layout: projects
 title: Projects
 ---
 
-    
-  <div class="home hero">
-    <a href="/"><img class="logo" src="/assets/images/Orange-Logo.png" alt="Tim Proffitt"></a>
+  <div class="container">
+    <div class="home hero">
+      <a href="/"><img class="logo" src="/assets/images/Orange-Logo.png" alt="Tim Proffitt"></a>
+    </div>
+    <h2 class="mb-half">Projects</h2>
   </div>
 
   <ul class="posts">
-    <h2>Projects</h2>
     {% for post in site.categories.case-study %}
       <!-- <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li> -->
-
-        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-        <br>
-        {% if post.category == 'case-study' %}
-        <li><a href="{{ post.url }}">Read more...</a></li>
-        {% endif %}
-        <br>
+        <li class="row color-stripe-{{ forloop.index }}">
+          <div class="unit">
+            {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+            <br>
+            {% if post.category == 'case-study' %}
+            <a target="_" href="{{ post.url }}">Read more...</a>
+            <br>
+            {% endif %}
+          </div>
+        </li>
     {% endfor %}
 
     {% for post in site.categories.project %}
+    <li class="row color-stripe-{{ forloop.index0 }}">
+      <div class="unit">
         {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
         <br>
         {% if post.category == 'case-study' %}
-        <li><a href="{{ post.url }}">Read more...</a></li>
-        {% endif %}
+        <a target="_" href="{{ post.url }}">Read more...</a>
         <br>
+        {% endif %}
+      </div>
+    </li>
     {% endfor %}
 
   </ul>

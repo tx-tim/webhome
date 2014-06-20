@@ -20,6 +20,31 @@
   }
 }
 
+@mixin color-switch($i){
+  @if $i % 5 == 4{
+    background-color: tint($compound-blue, 5%);
+    color: #fff;
+  } 
+
+  @else if $i % 5 == 3{
+    background-color: tint($base-blue, 88%);
+  }
+
+  @else if $i % 5 == 2{
+    background-color: tint($base-blue, 40%);
+    color: #fff;
+  }
+
+  @else if $i % 5 == 1{
+    background-color: $neutral-gray1; 
+  }
+
+  @else if $i % 5 == 0{
+    background-color: tint($base-orange, 5%);
+    color: #fff;
+  }
+}
+
 
 /* utility classes */
 /* =============== */
@@ -32,3 +57,10 @@
     @include inline-block-list;
 }
 
+.mb-half{
+  @include margin-trailer(.5);
+}
+
+.mb-1{
+  @include margin-trailer(1);
+}
