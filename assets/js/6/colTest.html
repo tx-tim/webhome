@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>colTest.html</title>
+    <script type="text/javascript"
+            src = "simpleGame.js"></script>
+    <script type="text/javascript">
+        var game;
+        var box;
+        var critter;
+        var output;
+        
+        function init(){
+            game = new Scene();
+            game.hideCursor();
+            box = new Sprite(game, "simpleBox.png", 50, 50);
+            critter = new Sprite(game, "critter.gif", 50, 50);
+            output = document.getElementById("output");
+            
+            //give box fixed position
+            box.setPosition(200, 150);
+            box.setSpeed(0);
+            critter.setPosition(100, 100);
+            critter.setSpeed(0);
+            
+            //critter controlled by mouse
+            critter.followMouse = function(){
+                this.setX(document.mouseX);
+                this.setY(document.mouseY);
+            } // end followMouse
+
+            game.start();
+        } // end init
+        
+        function update(){
+            game.clear();
+            critter.followMouse();
+            checkCollisions();
+            box.update();
+            critter.update();
+        } // end update;
+        
+        function checkCollisions(){
+            if (box.collidesWith(critter)){
+                output.innerHTML = "Collision";
+            } else {
+                output.innerHTML = "No collision";
+            } // end if
+        } // end checkCollisions
+        
+    </script>
+</head>
+<body onload = "init()">
+    <div id = "output">empty</div>
+</body>
+</html>

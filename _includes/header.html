@@ -5,6 +5,9 @@
           {% if p.title == "Projects" %}
           <li><a href="{{p.url}}">{{p.title}}</a></li>
           {% endif %}
+          {% if p.title == "Game" %}
+          <li><a href="{{p.url}}">{{p.title}}</a></li>
+          {% endif %}
         {% endfor %}
 
         <!-- <li><a href="">BLOG</a></li> -->

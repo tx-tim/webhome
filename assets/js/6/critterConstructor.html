@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>critter</title>
+    <script type="text/javascript"
+            src = "simpleGame.js">
+    </script>
+    <script type="text/javascript">
+        var game;
+        var critter;
+        
+        function Critter(){
+            tCritter = new Sprite(game, "critter.gif", 30, 30);
+            tCritter.setSpeed(0);
+            return tCritter;
+        }
+        
+        function init(){
+            game = new Scene();
+            critter = new Critter();
+            game.start();
+        }
+        
+        function update(){
+            game.clear();
+            critter.update();
+        }
+    </script>
+</head>
+<body onload = "init()">
+    
+</body>
+</html>

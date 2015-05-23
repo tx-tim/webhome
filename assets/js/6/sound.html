@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>sound.html</title>
+    <script type="text/javascript"
+            src = "simpleGame.js"></script>
+    <script type="text/javascript">
+        var scene;
+        var ribbit;
+        
+        function init(){
+            scene = new Scene();
+            owMP3 = new Sound("ow.mp3");
+            owOgg = new Sound("ow.ogg");
+            scene.start();
+        } // end init
+        
+        function update(){
+            if (keysDown[K_SPACE]){
+                owMP3.play();
+                owOgg.play();
+            } // end if            
+        } // end update
+        
+    </script>
+</head>
+<body onload = "init()">
+    <div>DO NOT press the space bar!!</div>
+</body>
+</html>

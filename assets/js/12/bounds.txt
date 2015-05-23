@@ -1,0 +1,64 @@
+  offRight = false;
+    offLeft = false;
+    offTop = false;
+    offBottom = false;
+    
+    if (this.x > rightBorder){
+      offRight = true;
+    }
+    
+    if (this.x < leftBorder){
+      offLeft = true;
+    }
+    
+    if (this.y > bottomBorder){
+      offBottom = true;
+    }
+    
+    if (this.y < 0){
+      offTop = true;
+    }
+
+    if (this.boundAction == WRAP){
+      if (offRight){
+	this.x = leftBorder;
+      } // end if
+  
+      if (offBottom){
+	this.y = topBorder;
+      } // end if
+  
+      if (offLeft){
+	this.x = rightBorder;
+      } // end if
+  
+      if (offTop){
+	this.y = bottomBorder;
+      }
+    } else if (this.boundAction == BOUNCE){
+      if (offTop || offBottom){
+	this.dy *= -1;
+	this.calcSpeedAngle();
+	this.imgAngle = this.moveAngle;
+      }
+      
+      if (offLeft || offRight){
+	this.dx *= -1;
+	this.calcSpeedAngle();
+	this.imgAngle = this.moveAngle;
+      }
+      
+    } else if (this.boundAction == STOP){
+      if (offLeft || offRight || offTop || offBottom){
+	this.setSpeed(0);
+      }
+    } else if (this.boundAction == DIE){
+      if (offLeft || offRight || offTop || offBottom){
+        this.hide();
+        this.setSpeed(0);
+      }
+      
+    } else {
+      //keep on going forever
+    }
+  } // end checkbounds

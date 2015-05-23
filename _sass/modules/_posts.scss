@@ -26,3 +26,10 @@
         @include rhythm(0,1,1,0)
     }
 }
+
+#game-canvas {
+    background-color: lightgray;
+    position: relative;
+    width: 75%;
+    height: 75%;
+}
