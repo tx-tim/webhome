@@ -1,15 +1,18 @@
-var scene;
+var scene,
+    timer,
+    planet,
+    stars = [];
 
 var planets = [{
-    initSpeed: 0.5,
-    src: "./assets/images/space/planet4.svg",
-    initWidth: 350,
-    initHeight: 350,
+    initSpeed: .12,
+    src: "./assets/images/space/planetsolid.svg",
+    initWidth: 150,
+    initHeight: 128,
     get initX() {
-        return this.initWidth/6;
+        return this.initWidth * 1.75;
     },
     get initY() {
-        return this.initHeight/5;
+        return this.initHeight/1.5;
     }
 }];
 
@@ -19,10 +22,10 @@ var starObj  = {
     initWidth: 25,
     initHeight: 25,
     get initX() {
-        return Math.random() * (-9000 - 1000) + 1000;
+        return Math.random() * (1000 - 1) + 1;
     },
     get initY() {
-        return Math.random() * (1 - -10) + -10;
+        return Math.random() * (1 - -90) + -90;
     }
 }
 
@@ -30,10 +33,11 @@ var starObj  = {
 function Planet(planetObj) {
     
     Sprite.call(this, scene, planetObj.src,  planetObj.initWidth, planetObj.initHeight);
+    
     this.setPosition(planetObj.initX, planetObj.initY);
     this.setSpeed(planetObj.initSpeed);
     this.setBoundAction(BOUNCE);
-    this.setMoveAngle(120)
+    this.setMoveAngle(70);
 }
 
 function Star(starObj) {    
@@ -52,38 +56,42 @@ function Star(starObj) {
     this.setPosition(starObj.initX, starObj.initY);
     this.setSpeed(this.initSpeed);
     this.setBoundAction(DIE);
-    this.setMoveAngle(120);
+    this.setMoveAngle(220);
     this.setImgAngle(90);
 }
 
+
+
 function init() {
     scene = new Scene('game-canvas');
-    //scene.setBG("green");
-    //scene.setSizePos(400, 300, 0, 0)
+    planet = new Planet(planets[0]);
 
-    planet1 = new Planet(planets[0]);
-    star1 = new Star(starObj);
-
+    planet.setImgAngle(222);
+    timer = new Timer();
     scene.start();
 }
 
-var stars = [];
-function update() {
-    var num = Math.random() + 3;
 
-    for(var i=0; i<=num;i++) {
-        stars.push(new Star(starObj));
+function update() {
+    var num = Math.random() + 5;
+
+    if(timer.getElapsedTime() > 3) {
+        for(var i=0; i<=num;i++) {
+            stars.push(new Star(starObj));
+        }
+        timer.reset();
     }
+    
 
     scene.clear();
 
     
-
     for (var j=0; j<stars.length; j++) {
         stars[j].update();
     }
 
-    planet1.update();
+    planet.update();
+
 }
 
 

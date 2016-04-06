@@ -3,23 +3,54 @@ $space-black: darken($midnight, 7%);
 .fs-canvas {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 400px;
+    text-align: center;
+
     >canvas {
         position: relative;
         width: 100%;
-        background-color: $midnight;
+        //background-color: $midnight;
+         @include background-image(linear-gradient(darken($midnight, 3%), $midnight 40%, $midnight));
     }
+
+    >.static-scene {
+        
+        position: relative;
+        
+
+        &.text-content {
+            top: -75%;
+            color: $blueStone;
+        }
+
+        &.img {
+            width: 400px;
+            bottom: 243px;
+        }
+    }    
 }
 
 .home {
-    background-color: $space-black;
-    overflow-y: hidden;
-    .text-content {
-        bottom: 0;
-        color: $hampton;
+    background-color: $solitude;
+    >.text-content {
+        top: 60%;
         padding-right: $base-horiz-padding;
         padding-bottom: $base-vertical-padding;
         padding-left: $base-horiz-padding;
         position: absolute;
+        text-align: center;
+        width: 100%;
+        h1 {
+            font-weight: bold;
+        }
+    }
+    .list-h {
+        a, a:visited{
+            color: $base-orange;
+        }
+
+        a:hover{
+            color: darken($base-orange, 20%);
+        }
     }
 }

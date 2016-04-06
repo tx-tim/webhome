@@ -587,7 +587,7 @@ function Scene(idSelector) {
         this.canvas.style.display = "block";
     }
 
-    this.setSize(800, 600);
+    this.setSize(800, 300);
     //this.setPos(10, 10);
     // this.setBG("lightgray");
 

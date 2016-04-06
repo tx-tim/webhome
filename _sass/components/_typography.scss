@@ -8,22 +8,28 @@ body{
     font-family: 'Raleway', Helvetica, Ariel, sans;
 }
 
-h1{
+h1, .h1{
     @include adjust-font-size-to($h1);
 }
 
-h2{
+h2, .h2{
      @include adjust-font-size-to($h2);
 }
 
-h3{
+h3, .h3{
      @include adjust-font-size-to($h3);
 }
 
-h4{
+h4, .h4{
     font-weight: bold;
 }
 
 strong{
     font-weight: bold;
+}
+
+a > .fa {
+	font-size: small;
+	vertical-align: middle;
+	font-weight: normal;
 }
