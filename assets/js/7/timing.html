@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>timing.html</title>
+    <style type="text/css">
+        #reset {
+            position: absolute;
+            left: 150px;
+            top: 300px;
+        }
+    </style>
+    <script type="text/javascript"
+            src = "simpleGame.js">
+    </script>
+    <script type = "text/javascript"
+            src = "frogLib.js"></script>
+    <script type="text/javascript">
+        var scene;
+        var frog;
+        var flies;
+        var leaves;
+        var ribbitMP3;
+        var ribbitOGG;
+        var scoreBoard;
+        var hits;
+        var NUMFLIES = 3;
+        var MAXTIME = 10;
+        var timer;
+        var time;
+
+        function init(){
+            scoreBoard = document.getElementById("scoreBoard");
+            hits = 0;
+            timer = new Timer();
+            scene = new Scene();
+            scene.setBG("green");
+            frog = new Frog();
+            leaves = new Sprite(scene, "leaves.png", 640, 480);
+            leaves.setSpeed(0);
+            ribbitMP3 = new Sound("ribbit.mp3");
+            ribbitOGG = new Sound("ribbit.ogg");
+
+            setupFlies();
+            scene.start();
+        } // end init
+    
+        function update(){
+            scene.clear();
+            checkTime();
+            frog.checkKeys();
+            leaves.update();
+            for (i = 0; i < NUMFLIES; i++){
+              flies[i].wriggle();
+              checkCollisions(i);
+              flies[i].update();
+            } // end for loop
+            frog.update();
+        } // end update();
+   
+        function setupFlies(){
+            flies = new Array(NUMFLIES);
+            for (i = 0; i < NUMFLIES; i++){
+              flies[i] = new Fly();
+            } // end for
+        } // end setupFlies
+        
+        function checkCollisions(flyNum){
+            if (frog.collidesWith(flies[flyNum])){
+                flies[flyNum].reset();
+                ribbitMP3.play();
+                ribbitOGG.play();
+                hits += 1;
+                updateScore();
+            } // end if
+        } // end checkCollisions
+        
+        function updateScore(){
+            //update the scoreboard
+            scoreBoard.innerHTML = "Hits: " + hits + ". Time: " + time;
+        } // end updateScore
+        
+        function checkTime(){
+            time = timer.getElapsedTime();
+            if (time > MAXTIME){
+                scene.stop();
+            } // end if
+            updateScore();
+
+        } // end checkTime
+        
+        function restart(){
+            document.location.href = "";
+        } // end restart
+        
+    </script>
+    
+</head>
+<body onload = "init()">
+    <div id = "scoreBoard">Hits: 0</div>
+    <div id = "reset">
+        <button type = "button"
+                onclick = "restart()">
+            Play again
+        </button>
+    </div>
+</body>
+
+</html>

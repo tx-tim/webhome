@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>multiFlies.html</title>
+    <script type="text/javascript"
+            src = "simpleGame.js">
+    </script>
+    <script type = "text/javascript"
+            src = "frogLib.js"></script>
+    <script type="text/javascript">
+        var scene;
+        var frog;
+        var flies;
+        var leaves;
+        var scoreBoard;
+        var hits;
+        var ribbitMP3;
+        var ribbitOGG;
+        //var fly;
+        var NUMFLIES = 3;
+
+        function init(){
+            scoreBoard = document.getElementById("scoreBoard");
+            hits = 0;
+            scene = new Scene();
+            scene.setBG("green");
+            frog = new Frog();
+            setupFlies();
+            leaves = new Sprite(scene, "leaves.png", 640, 480);
+            leaves.setSpeed(0);
+            ribbitMP3 = new Sound("ribbit.mp3");
+            ribbitOGG = new Sound("ribbit.ogg");
+            scene.start();
+        } // end init
+    
+        function update(){
+            scene.clear();
+            frog.checkKeys();
+            leaves.update();
+            for (i = 0; i < NUMFLIES; i++){
+              flies[i].wriggle();
+              checkCollisions(i);
+              flies[i].update();
+            } // end for loop
+            frog.update();
+        } // end update();
+   
+        function setupFlies(){
+            flies = new Array(NUMFLIES);
+            for (i = 0; i < NUMFLIES; i++){
+              flies[i] = new Fly();
+            } // end for
+        } // end setupFlies
+        
+        function checkCollisions(flyNum){
+            if (frog.collidesWith(flies[flyNum])){
+                flies[flyNum].reset();
+                ribbitMP3.play();
+                ribbitOGG.play();
+                updateScore();
+            } // end if
+        } // end checkCollisions
+        
+        function updateScore(){
+            //update the scoreboard
+            hits += 1;
+            scoreBoard.innerHTML = "Hits: " + hits
+        } // end updateScore
+    
+    </script>
+    
+</head>
+<body onload = "init()">
+    <div id = "scoreBoard">Hits: 0</div>
+</body>
+</html>

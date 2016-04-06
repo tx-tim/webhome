@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>collision.html</title>
+    <script type="text/javascript"
+            src = "simpleGame.js">
+    </script>
+    <script type = "text/javascript"
+            src = "frogLib.js"></script>
+    <script type="text/javascript">
+        var scene;
+        var frog;
+        var fly;
+        var leaves;
+        var ribbitMP3;
+        var ribbitOGG;
+
+        function init(){
+            scene = new Scene();
+            scene.setBG("green");
+            frog = new Frog();
+            fly = new Fly();
+            leaves = new Sprite(scene, "leaves.png", 640, 480);
+            leaves.setSpeed(0);
+            ribbitMP3 = new Sound("ribbit.mp3");
+            ribbitOGG = new Sound("ribbit.ogg");
+
+            scene.start();
+        } // end init
+    
+        function update(){
+            scene.clear();
+            frog.checkKeys();
+            fly.wriggle();
+            checkCollisions();
+            leaves.update();
+            frog.update();
+            fly.update(); 
+        } // end update();
+   
+        function checkCollisions(){
+            if (frog.collidesWith(fly)){
+                ribbitMP3.play();
+                ribbitOGG.play();
+                fly.reset();
+            } // end if
+        } // end checkCollisions
+    
+    </script>
+    
+</head>
+<body onload = "init()">
+</body>
+</html>

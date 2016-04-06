@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="476.61215"
+   height="520.60712"
+   id="svg6312"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:modified="true"
+   version="1.0"
+   sodipodi:docname="Explosion.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs6314">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 260.30356 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="476.61215 : 260.30356 : 1"
+       inkscape:persp3d-origin="238.30608 : 173.53571 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="228.82507"
+     inkscape:cy="261.4812"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="876"
+     inkscape:window-height="675"
+     inkscape:window-x="1371"
+     inkscape:window-y="544"
+     showgrid="false" />
+  <metadata
+     id="metadata6317">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-107.4078,-172.05911)">
+    <path
+       sodipodi:nodetypes="czczczczczc"
+       id="polygon7583"
+       d="M 554.68998,590.01131 C 554.68998,590.01131 417.65416,499.15437 361.52274,520.64591 C 305.39132,542.13746 268.72269,692.66624 268.72269,692.66624 C 268.72269,692.66624 301.24259,530.9771 278.84153,491.84387 C 256.44046,452.71064 190.58762,445.82514 190.58762,445.82514 C 190.58762,445.82514 260.61852,426.48114 277.87364,402.24079 C 295.12876,378.00044 290.89615,302.28422 290.89615,302.28422 C 290.89615,302.28422 331.81176,366.14966 359.99758,375.69716 C 388.1834,385.24465 456.2879,359.91763 456.2879,359.91763 C 456.2879,359.91763 404.36416,404.4159 411.70633,448.87545 C 419.04851,493.33501 554.68998,590.01131 554.68998,590.01131 z"
+       style="fill:#ffffff;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+</svg>

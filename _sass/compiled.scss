@@ -5,16 +5,17 @@
 @import "compass";
 @import "compass/reset";
 
-@import "./modules/variables";
-@import "./modules/jekyll";
-@import "./modules/typography";
-//@import "./font-awesome/font-awesome";
-@import "./modules/utility";
-@import "./modules/syntax";
-@import "./modules/grid";
-@import "./modules/hero";
-@import "./modules/header";
-@import "./modules/posts";
+@import "./components/variables";
+@import "./components/jekyll";
+@import "./components/typography";
+@import "./components/utility";
+@import "./components/syntax";
+@import "./components/grid";
+@import "./components/header";
+@import "./components/posts";
+
+@import "./components/index";
+
 
 
 
