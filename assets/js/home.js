@@ -4,7 +4,7 @@ var scene,
     stars = [];
 
 var planets = [{
-    initSpeed: .12,
+    initSpeed: .15,
     src: "./assets/images/space/planetsolid.svg",
     initWidth: 150,
     initHeight: 128,
@@ -42,22 +42,22 @@ function Planet(planetObj) {
 
 function Star(starObj) {    
     this.initSpeed = Math.random() * (25 - 10) + 10;
-    this.src = "./assets/images/space/star3.svg";
-    this.initWidth = 5;
-    this.initHeight = 5;
+    this.src = "./assets/images/space/5ptstarsolid.svg";
+    this.initWidth = 15;
+    this.initHeight = 15;
     this.xPos = function() {
-        return Math.random() * (500-1) + 1;
+        return Math.random() * (800-500) + 500;
     },
     this.yPos = function() {
-        return Math.random() * (500 - -10) + -10;
+        return Math.random() * (100 - -10) + -10;
     }
 
     Sprite.call(this, scene, this.src,  this.initWidth, this.initHeight);
     this.setPosition(starObj.initX, starObj.initY);
     this.setSpeed(this.initSpeed);
     this.setBoundAction(DIE);
-    this.setMoveAngle(220);
-    this.setImgAngle(90);
+    this.setMoveAngle(240);
+    //this.setImgAngle(90);
 }
 
 
@@ -73,12 +73,9 @@ function init() {
 
 
 function update() {
-    var num = Math.random() + 5;
 
     if(timer.getElapsedTime() > 3) {
-        for(var i=0; i<=num;i++) {
-            stars.push(new Star(starObj));
-        }
+        stars.push(new Star(starObj));
         timer.reset();
     }
     
