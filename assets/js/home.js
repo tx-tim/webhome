@@ -1,7 +1,8 @@
 var scene,
     timer,
     planet,
-    stars = [];
+    stars = [],
+    elapsedTimeSpaceing = 2.5;
 
 var planets = [{
     initSpeed: .15,
@@ -16,18 +17,7 @@ var planets = [{
     }
 }];
 
-var starObj  = {
-    initSpeed: 10,
-    src: "./assets/images/space/star3.svg",
-    initWidth: 25,
-    initHeight: 25,
-    get initX() {
-        return Math.random() * (1000 - 1) + 1;
-    },
-    get initY() {
-        return Math.random() * (1 - -90) + -90;
-    }
-}
+
 
 
 function Planet(planetObj) {
@@ -40,8 +30,8 @@ function Planet(planetObj) {
     this.setMoveAngle(70);
 }
 
-function Star(starObj) {    
-    this.initSpeed = Math.random() * (25 - 10) + 10;
+function Star() {    
+    this.initSpeed = Math.random() * (30 - 15) + 15;
     this.src = "./assets/images/space/5ptstarsolid.svg";
     this.initWidth = 15;
     this.initHeight = 15;
@@ -49,11 +39,11 @@ function Star(starObj) {
         return Math.random() * (800-500) + 500;
     },
     this.yPos = function() {
-        return Math.random() * (100 - -10) + -10;
+        return Math.random() * (0 - -50) + -10;
     }
 
     Sprite.call(this, scene, this.src,  this.initWidth, this.initHeight);
-    this.setPosition(starObj.initX, starObj.initY);
+    this.setPosition(this.xPos(), this.yPos());
     this.setSpeed(this.initSpeed);
     this.setBoundAction(DIE);
     this.setMoveAngle(240);
@@ -73,15 +63,14 @@ function init() {
 
 
 function update() {
-
-    if(timer.getElapsedTime() > 3) {
-        stars.push(new Star(starObj));
+    
+    if(timer.getElapsedTime() > elapsedTimeSpaceing) {
+        stars.push(new Star());
+        elapsedTimeSpaceing += 2; 
         timer.reset();
     }
     
-
     scene.clear();
-
     
     for (var j=0; j<stars.length; j++) {
         stars[j].update();
