@@ -6,13 +6,17 @@ $space-black: darken($midnight, 7%);
     height: 400px;
     text-align: center;
 
-    -webkit-animation: fadein .65s; /* Safari, Chrome and Opera > 12.1 */
-   -moz-animation: fadein .65s; /* Firefox < 16 */
-    -ms-animation: fadein .65s; /* Internet Explorer */
-     -o-animation: fadein .65s; /* Opera < 12.1 */
-        animation: fadein .65s;
-        animation-iteration-count: 1;
-    
+    -webkit-animation: fadein .85s; /* Safari, Chrome and Opera > 12.1 */
+    -webkit-animation-iteration-count: 1;
+    -moz-animation: fadein .85s; /* Firefox < 16 */
+    -moz-animation-iteration-count: 1;
+     -ms-animation: fadein .85s; /* Internet Explorer */
+     -ms-animation-iteration-count: 1;
+      -o-animation: fadein .85s; /* Opera < 12.1 */
+      -o-animation-iteration-count: 1;
+         animation: fadein .85s;
+         animation-iteration-count: 1;
+
     >canvas {
         position: relative;
         width: 100%;
