@@ -18,8 +18,6 @@ var planets = [{
 }];
 
 
-
-
 function Planet(planetObj) {
     Sprite.call(this, scene, planetObj.src,  planetObj.initWidth, planetObj.initHeight);
     this.setPosition(planetObj.initX, planetObj.initY);
