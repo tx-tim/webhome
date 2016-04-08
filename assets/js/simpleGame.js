@@ -73,7 +73,7 @@ function Sprite(scene, imageFile, width, height) {
             //intended only to be called from update, should never
             //need to be deliberately called by user
             ctx = this.context;
-
+            ctx.imageSmoothingEnabled = false;
             ctx.save();
             //The following lines are for Tyler's code. Removed for now
             //if( this.camera ){ ctx.translate(this.x - this.camera.cameraOffsetX, this.y - this.camera.cameraOffsetY); }

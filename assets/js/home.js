@@ -7,8 +7,8 @@ var scene,
 var planets = [{
     initSpeed: .15,
     src: "./assets/images/space/planetsolid.svg",
-    initWidth: 150,
-    initHeight: 128,
+    initWidth: 130,
+    initHeight: 111,
     get initX() {
         return this.initWidth * 1.75;
     },
@@ -21,9 +21,7 @@ var planets = [{
 
 
 function Planet(planetObj) {
-    
     Sprite.call(this, scene, planetObj.src,  planetObj.initWidth, planetObj.initHeight);
-    
     this.setPosition(planetObj.initX, planetObj.initY);
     this.setSpeed(planetObj.initSpeed);
     this.setBoundAction(BOUNCE);

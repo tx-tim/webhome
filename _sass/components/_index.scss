@@ -33,6 +33,9 @@ $space-black: darken($midnight, 7%);
         &.text-content {
             top: -30%;
             color: $regalBlue;
+            @include mq(small) {
+                top: -17%;
+            }
         }
 
         &.rocket {
@@ -53,10 +56,15 @@ $space-black: darken($midnight, 7%);
         }
         &.exhaust {
             width: 400px;
-            top: -17%;
+            top: -75px;
+            @include transition-property(width);
+            @include transition-duration(.25s);
+            @include transition-timing-function(ease-in-out);
+
+ 
             @include mq(small) {
                 width: 200px;
-                top: -9%;
+                top: -40px;
             }
         }
     }    
