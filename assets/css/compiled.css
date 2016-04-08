@@ -3394,7 +3394,7 @@ a > .fa {
   color: #fff;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 749px) {
   /* line 43, ../../_sass/components/_grid.scss */
   .container {
     width: 100%;
@@ -3406,7 +3406,7 @@ a > .fa {
     width: 100%;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 750px) and (max-width: 1024px) {
   /* line 55, ../../_sass/components/_grid.scss */
   .container {
     width: 100%;
@@ -3418,7 +3418,7 @@ a > .fa {
     width: 100%;
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   /* line 67, ../../_sass/components/_grid.scss */
   .container {
     width: 970px;
@@ -3478,14 +3478,14 @@ header nav.connect ul .connect-ovr {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 749px) {
   /* line 48, ../../_sass/components/_header.scss */
   header nav {
     font-size: 0.81818em;
     line-height: 1.83333em;
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   /* line 57, ../../_sass/components/_header.scss */
   header nav {
     font-size: 0.81818em;
@@ -3528,6 +3528,11 @@ header nav.connect ul .connect-ovr {
   width: 100%;
   height: 400px;
   text-align: center;
+}
+/* line 11, ../../_sass/components/_index.scss */
+.fs-canvas > canvas {
+  position: relative;
+  width: 100%;
   -webkit-animation: fadein .85s;
   /* Safari, Chrome and Opera > 12.1 */
   -webkit-animation-iteration-count: 1;
@@ -3542,37 +3547,70 @@ header nav.connect ul .connect-ovr {
   -o-animation-iteration-count: 1;
   animation: fadein .85s;
   animation-iteration-count: 1;
-}
-/* line 20, ../../_sass/components/_index.scss */
-.fs-canvas > canvas {
-  position: relative;
-  width: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #12272f), color-stop(40%, #16303a), color-stop(100%, #16303a));
   background-image: -webkit-linear-gradient(#12272f, #16303a 40%, #16303a);
   background-image: -moz-linear-gradient(#12272f, #16303a 40%, #16303a);
   background-image: -o-linear-gradient(#12272f, #16303a 40%, #16303a);
   background-image: linear-gradient(#12272f, #16303a 40%, #16303a);
 }
-/* line 30, ../../_sass/components/_index.scss */
+/* line 29, ../../_sass/components/_index.scss */
 .fs-canvas > .static-scene {
   position: relative;
 }
-/* line 35, ../../_sass/components/_index.scss */
+/* line 33, ../../_sass/components/_index.scss */
 .fs-canvas > .static-scene.text-content {
-  top: -75%;
+  top: -30%;
   color: #035069;
 }
-/* line 40, ../../_sass/components/_index.scss */
-.fs-canvas > .static-scene.img {
+/* line 38, ../../_sass/components/_index.scss */
+.fs-canvas > .static-scene.rocket {
+  position: absolute;
+  top: 169px;
+  left: 47.5%;
+  width: 5%;
+  -webkit-transition-property: top, bottom;
+  -moz-transition-property: top, bottom;
+  -o-transition-property: top, bottom;
+  transition-property: top, bottom;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+@media only screen and (min-width: 750px) and (max-width: 1024px) {
+  /* line 38, ../../_sass/components/_index.scss */
+  .fs-canvas > .static-scene.rocket {
+    top: 100px;
+  }
+}
+@media only screen and (max-width: 749px) {
+  /* line 38, ../../_sass/components/_index.scss */
+  .fs-canvas > .static-scene.rocket {
+    top: 66px;
+  }
+}
+/* line 54, ../../_sass/components/_index.scss */
+.fs-canvas > .static-scene.exhaust {
   width: 400px;
-  bottom: 243px;
+  top: -17%;
+}
+@media only screen and (max-width: 749px) {
+  /* line 54, ../../_sass/components/_index.scss */
+  .fs-canvas > .static-scene.exhaust {
+    width: 200px;
+    top: -9%;
+  }
 }
 
-/* line 47, ../../_sass/components/_index.scss */
+/* line 65, ../../_sass/components/_index.scss */
 .home {
   background-color: #e9eff0;
 }
-/* line 49, ../../_sass/components/_index.scss */
+/* line 67, ../../_sass/components/_index.scss */
 .home > .text-content {
   top: 60%;
   padding-right: 0.25em;
@@ -3582,15 +3620,15 @@ header nav.connect ul .connect-ovr {
   text-align: center;
   width: 100%;
 }
-/* line 57, ../../_sass/components/_index.scss */
+/* line 75, ../../_sass/components/_index.scss */
 .home > .text-content h1 {
   font-weight: bold;
 }
-/* line 62, ../../_sass/components/_index.scss */
+/* line 80, ../../_sass/components/_index.scss */
 .home .list-h a, .home .list-h a:visited {
   color: #d86b49;
 }
-/* line 66, ../../_sass/components/_index.scss */
+/* line 84, ../../_sass/components/_index.scss */
 .home .list-h a:hover {
   color: #9a3e21;
 }

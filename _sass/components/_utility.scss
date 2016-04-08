@@ -4,18 +4,18 @@
 @mixin mq($point) {
   @if $point == large {
     @media only screen 
-        and (min-width : 769px) 
+        and (min-width : 1025px) 
         { @content; }
   }
   @else if $point == med {
     @media only screen 
-        and (min-width : 768px) 
+        and (min-width : 750px) 
         and (max-width : 1024px)
         { @content; }
   }
   @else if $point == small {
     @media only screen  
-        and (max-width : 767px)
+        and (max-width : 749px)
         { @content; }
   }
 }

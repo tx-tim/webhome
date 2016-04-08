@@ -6,6 +6,11 @@ $space-black: darken($midnight, 7%);
     height: 400px;
     text-align: center;
 
+
+
+    >canvas {
+        position: relative;
+        width: 100%;
     -webkit-animation: fadein .85s; /* Safari, Chrome and Opera > 12.1 */
     -webkit-animation-iteration-count: 1;
     -moz-animation: fadein .85s; /* Firefox < 16 */
@@ -16,30 +21,43 @@ $space-black: darken($midnight, 7%);
       -o-animation-iteration-count: 1;
          animation: fadein .85s;
          animation-iteration-count: 1;
-
-    >canvas {
-        position: relative;
-        width: 100%;
         //background-color: $midnight;
         @include background-image(linear-gradient(darken($midnight, 3%), $midnight 40%, $midnight));
     }
-
-
 
 
     >.static-scene {
         
         position: relative;
         
-
         &.text-content {
-            top: -75%;
+            top: -30%;
             color: $regalBlue;
         }
 
-        &.img {
+        &.rocket {
+            position: absolute;
+            top: 169px;
+            left: 47.5%;
+            width: 5%;
+            @include transition-property(top, bottom);
+            @include transition-duration(2s);
+            @include transition-timing-function(ease-in-out);
+
+            @include mq(med) {
+                top: 100px;
+            }
+            @include mq(small) {
+                top: 66px;
+            }
+        }
+        &.exhaust {
             width: 400px;
-            bottom: 243px;
+            top: -17%;
+            @include mq(small) {
+                width: 200px;
+                top: -9%;
+            }
         }
     }    
 }
