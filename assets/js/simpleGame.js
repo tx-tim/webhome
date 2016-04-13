@@ -15,6 +15,85 @@ var currentKey = null;
 var keysDown = new Array(256);
 var virtKeys = false;
 
+function Shape(scene, width, height) {
+    this.scene = scene;
+    this.canvas = scene.canvas;
+    this.context = this.canvas.getContext("2d");
+    this.animation = false; // becomes Animation Class
+    this.width = width;
+    this.height = height;
+    this.cHeight = parseInt(this.canvas.height);
+    this.cWidth = parseInt(this.canvas.width);
+    this.x = 200;
+    this.y = 200;
+    this.dx = 10;
+    this.dy = 0;
+    this.imgAngle = 0;
+    this.moveAngle = 0;
+    this.speed = 10;
+    this.camera = false;
+    this.visible = true;
+    this.boundAction = WRAP;
+
+    this.setPosition = function(x, y) {
+        //position is position of center
+        this.x = x;
+        this.y = y;
+    } // end setPosition function
+
+    this.setX = function(nx) { this.x = nx; }
+    this.setY = function(ny) { this.y = ny; }
+    this.setChangeX = function(ndx) { this.dx = ndx; }
+    this.setChangeY = function(ndy) { this.dy = ndy; }
+    this.setDX = function(newDX) {
+        this.dx = newDX;
+    }
+    this.setDY = function(newDY) {
+        this.dy = newDY;
+    }
+    this.changeXby = function(tdx) { this.x += tdx };
+    this.changeYby = function(tdy) { this.y += tdy };
+    this.hide = function() { this.visible = false; }
+    this.show = function() { this.visible = true; }
+
+    this.draw = function() {
+            //draw self on canvas;
+            //intended only to be called from update, should never
+            //need to be deliberately called by user
+            ctx = this.context;
+            ctx.imageSmoothingEnabled = false;
+            ctx.save();
+            //The following lines are for Tyler's code. Removed for now
+            //if( this.camera ){ ctx.translate(this.x - this.camera.cameraOffsetX, this.y - this.camera.cameraOffsetY); }
+            //else{ ctx.translate(this.x, this.y); }
+
+            //transform element
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.imgAngle);
+
+            //draw image with center on origin
+            if (this.animation != false) {
+                this.animation.drawFrame(ctx);
+            } else {
+                ctx.drawImage(this.image,
+                    0 - (this.width / 2),
+                    0 - (this.height / 2),
+                    this.width, this.height);
+            }
+            ctx.restore();
+
+        } // end draw function
+
+    this.update = function() {
+            this.x += this.dx;
+            this.y += this.dy;
+            this.checkBounds();
+            if (this.visible) {
+                this.draw();
+            } // end if
+        } // end update
+}
+
 function Sprite(scene, imageFile, width, height) {
     //core class for game engine
     this.scene = scene;

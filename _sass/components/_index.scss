@@ -3,26 +3,37 @@ $space-black: darken($midnight, 7%);
 .fs-canvas {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 300px;
     text-align: center;
-
-
+        -webkit-animation: fadein .75s; /* Safari, Chrome and Opera > 12.1 */
+    -webkit-animation-iteration-count: 1;
+    -moz-animation: fadein .75s; /* Firefox < 16 */
+    -moz-animation-iteration-count: 1;
+     -ms-animation: fadein .75s; /* Internet Explorer */
+     -ms-animation-iteration-count: 1;
+      -o-animation: fadein .75s; /* Opera < 12.1 */
+      -o-animation-iteration-count: 1;
+         animation: fadein .75s;
+         animation-iteration-count: 1;
 
     >canvas {
         position: relative;
         width: 100%;
-    -webkit-animation: fadein .85s; /* Safari, Chrome and Opera > 12.1 */
+            -webkit-animation: fadein .95s; /* Safari, Chrome and Opera > 12.1 */
     -webkit-animation-iteration-count: 1;
-    -moz-animation: fadein .85s; /* Firefox < 16 */
+    -moz-animation: fadein .95s; /* Firefox < 16 */
     -moz-animation-iteration-count: 1;
-     -ms-animation: fadein .85s; /* Internet Explorer */
+     -ms-animation: fadein .95s; /* Internet Explorer */
      -ms-animation-iteration-count: 1;
-      -o-animation: fadein .85s; /* Opera < 12.1 */
+      -o-animation: fadein .95s; /* Opera < 12.1 */
       -o-animation-iteration-count: 1;
-         animation: fadein .85s;
+         animation: fadein .95s;
          animation-iteration-count: 1;
         //background-color: $midnight;
-        @include background-image(linear-gradient(darken($midnight, 3%), $midnight 40%, $midnight));
+        &#static-canvas {
+            position: absolute;
+            @include background-image(linear-gradient(darken($midnight, 3%), $midnight 40%, $midnight));
+        }
     }
 
 
