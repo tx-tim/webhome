@@ -3526,49 +3526,67 @@ header nav.connect ul .connect-ovr {
 .fs-canvas {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 300px;
   text-align: center;
+  -webkit-animation: fadein .75s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -webkit-animation-iteration-count: 1;
+  -moz-animation: fadein .75s;
+  /* Firefox < 16 */
+  -moz-animation-iteration-count: 1;
+  -ms-animation: fadein .75s;
+  /* Internet Explorer */
+  -ms-animation-iteration-count: 1;
+  -o-animation: fadein .75s;
+  /* Opera < 12.1 */
+  -o-animation-iteration-count: 1;
+  animation: fadein .75s;
+  animation-iteration-count: 1;
 }
-/* line 11, ../../_sass/components/_index.scss */
+/* line 19, ../../_sass/components/_index.scss */
 .fs-canvas > canvas {
   position: relative;
   width: 100%;
-  -webkit-animation: fadein .85s;
+  -webkit-animation: fadein .95s;
   /* Safari, Chrome and Opera > 12.1 */
   -webkit-animation-iteration-count: 1;
-  -moz-animation: fadein .85s;
+  -moz-animation: fadein .95s;
   /* Firefox < 16 */
   -moz-animation-iteration-count: 1;
-  -ms-animation: fadein .85s;
+  -ms-animation: fadein .95s;
   /* Internet Explorer */
   -ms-animation-iteration-count: 1;
-  -o-animation: fadein .85s;
+  -o-animation: fadein .95s;
   /* Opera < 12.1 */
   -o-animation-iteration-count: 1;
-  animation: fadein .85s;
+  animation: fadein .95s;
   animation-iteration-count: 1;
+}
+/* line 33, ../../_sass/components/_index.scss */
+.fs-canvas > canvas#static-canvas {
+  position: absolute;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #12272f), color-stop(40%, #16303a), color-stop(100%, #16303a));
   background-image: -webkit-linear-gradient(#12272f, #16303a 40%, #16303a);
   background-image: -moz-linear-gradient(#12272f, #16303a 40%, #16303a);
   background-image: -o-linear-gradient(#12272f, #16303a 40%, #16303a);
   background-image: linear-gradient(#12272f, #16303a 40%, #16303a);
 }
-/* line 29, ../../_sass/components/_index.scss */
+/* line 40, ../../_sass/components/_index.scss */
 .fs-canvas > .static-scene {
   position: relative;
 }
-/* line 33, ../../_sass/components/_index.scss */
+/* line 44, ../../_sass/components/_index.scss */
 .fs-canvas > .static-scene.text-content {
   top: -30%;
   color: #035069;
 }
 @media only screen and (max-width: 749px) {
-  /* line 33, ../../_sass/components/_index.scss */
+  /* line 44, ../../_sass/components/_index.scss */
   .fs-canvas > .static-scene.text-content {
     top: -17%;
   }
 }
-/* line 41, ../../_sass/components/_index.scss */
+/* line 52, ../../_sass/components/_index.scss */
 .fs-canvas > .static-scene.rocket {
   position: absolute;
   top: 169px;
@@ -3588,18 +3606,18 @@ header nav.connect ul .connect-ovr {
   transition-timing-function: ease-in-out;
 }
 @media only screen and (min-width: 750px) and (max-width: 1024px) {
-  /* line 41, ../../_sass/components/_index.scss */
+  /* line 52, ../../_sass/components/_index.scss */
   .fs-canvas > .static-scene.rocket {
     top: 100px;
   }
 }
 @media only screen and (max-width: 749px) {
-  /* line 41, ../../_sass/components/_index.scss */
+  /* line 52, ../../_sass/components/_index.scss */
   .fs-canvas > .static-scene.rocket {
     top: 66px;
   }
 }
-/* line 57, ../../_sass/components/_index.scss */
+/* line 68, ../../_sass/components/_index.scss */
 .fs-canvas > .static-scene.exhaust {
   width: 400px;
   top: -75px;
@@ -3617,18 +3635,18 @@ header nav.connect ul .connect-ovr {
   transition-timing-function: ease-in-out;
 }
 @media only screen and (max-width: 749px) {
-  /* line 57, ../../_sass/components/_index.scss */
+  /* line 68, ../../_sass/components/_index.scss */
   .fs-canvas > .static-scene.exhaust {
     width: 200px;
     top: -40px;
   }
 }
 
-/* line 73, ../../_sass/components/_index.scss */
+/* line 84, ../../_sass/components/_index.scss */
 .home {
   background-color: #e9eff0;
 }
-/* line 75, ../../_sass/components/_index.scss */
+/* line 86, ../../_sass/components/_index.scss */
 .home > .text-content {
   top: 60%;
   padding-right: 0.25em;
@@ -3638,15 +3656,15 @@ header nav.connect ul .connect-ovr {
   text-align: center;
   width: 100%;
 }
-/* line 83, ../../_sass/components/_index.scss */
+/* line 94, ../../_sass/components/_index.scss */
 .home > .text-content h1 {
   font-weight: bold;
 }
-/* line 88, ../../_sass/components/_index.scss */
+/* line 99, ../../_sass/components/_index.scss */
 .home .list-h a, .home .list-h a:visited {
   color: #d86b49;
 }
-/* line 92, ../../_sass/components/_index.scss */
+/* line 103, ../../_sass/components/_index.scss */
 .home .list-h a:hover {
   color: #9a3e21;
 }

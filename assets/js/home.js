@@ -1,4 +1,5 @@
-var scene,
+var bg,
+    scene,
     timer,
     planet,
     stars = [],
@@ -26,7 +27,7 @@ function Planet(planetObj) {
     this.setMoveAngle(70);
 }
 
-function Star() {    
+function ShootingStar() {    
     this.initSpeed = Math.random() * (30 - 15) + 15;
     this.src = "./assets/images/space/5ptstarsolid.svg";
     this.initWidth = 15;
@@ -43,25 +44,44 @@ function Star() {
     this.setSpeed(this.initSpeed);
     this.setBoundAction(DIE);
     this.setMoveAngle(240);
-    //this.setImgAngle(90);
+
 }
 
+function Star() {
+    Shape.call(this, scene, 20, 20);
+}
 
+function scatterStars(scene) {
+    var ctx = scene.canvas.getContext('2d')
+        canvas = scene.canvas;
+
+    ctx.beginPath();
+    for(var n=0;n<100;n++){
+        var x=parseInt(Math.random()*canvas.width);
+        var y=parseInt(Math.random()*canvas.height);
+        var radius=Math.random();
+        var opacity = Math.random();
+        ctx.arc(x,y,radius,0,Math.PI*2,false);
+        ctx.closePath();
+        ctx.fillStyle="rgba(150,150,150," + opacity + ")";
+        ctx.fill();
+    }
+}
 
 function init() {
+    bg = new Scene('static-canvas');
+    scatterStars(bg);
     scene = new Scene('game-canvas');
     planet = new Planet(planets[0]);
-
     planet.setImgAngle(222);
     timer = new Timer();
     scene.start();
 }
 
-
 function update() {
     
     if(timer.getElapsedTime() > elapsedTimeSpaceing) {
-        stars.push(new Star());
+        stars.push(new ShootingStar());
         elapsedTimeSpaceing += 2; 
         timer.reset();
     }
@@ -75,7 +95,6 @@ function update() {
     planet.update();
 
 }
-
 
 window.onload = function() {
     init();
